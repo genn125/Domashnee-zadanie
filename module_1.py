@@ -4,16 +4,18 @@
 # Дополнительная практика : "Средний балл"
 
 grades = [[5, 3, 3, 5, 4], [2, 2, 2, 3], [4, 5, 5, 2], [4, 4, 3], [5, 5, 5, 4, 5]]
-students = {'Johnny', 'Bilbo', 'Steve', 'Khendrik', 'Aaron'}
-sorting = sorted(students)                         # Сортировка по алфавиту студентов
+students = {'Johnnny', 'Bilbo', 'Steve', 'Khendrik', 'Aaron'}
 
-average_grades = {}                                   # Средние оценкИ, Создание пустого словаря
+sorting = sorted(students)                         # Сортировать студентов
 
-for i in range(len(sorting)):                             # диапазон по колличеству студентов
-    student = list(sorting)[i]                              #Преобразует последовательность в список
+average_grades = {}                                   # "Средние оценкИ", Создать пустой словарь
 
+for i in range(len(sorting)):                            # i присвоить диапазон (range) по количеству (len) сортированных студентов (sorting)
 
-    average_grade = sum(grades[i]) / len(grades[i])             # Средняя оценкА
-    average_grades[student] = average_grade
+    studddent = sorting[i]                                   # studddent присвоить элемент списка sorting с номером, равным значению переменной i
+
+    average_grades[studddent] = sum(grades[i]) / len(grades[i])  #  Заполнить пустой словарь "Средние оценкИ"
 
 print(average_grades)
+
+# Иногда, при очень частом изменении в программе, результат давал ТОЛЬКО {'Steve': 4.8}, приходилось откатывать
